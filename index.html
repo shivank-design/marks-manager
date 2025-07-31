@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Marks App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Marks Calculator</h1>
+    <div id="input-section">
+      <label for="studentName">Name:</label>
+      <input type="text" id="studentName" placeholder="Enter your name" />
+      <label for="totalMarks">Total Marks:</label>
+      <input type="number" id="totalMarks" placeholder="e.g. 100" />
+      <div id="subjects"></div>
+      <button onclick="addSubject()">Add Subject</button>
+      <button onclick="calculateResults()">Calculate</button>
+      <button onclick="exportPDF()">Export to PDF</button>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <div id="results"></div>
+    <canvas id="chartCanvas" width="400" height="200"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
